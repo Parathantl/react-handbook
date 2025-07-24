@@ -1,10 +1,14 @@
 import axios from 'axios';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { UserContext } from './UserContext';
 
 const UniverisityProfile = () => {
     const [univeristy, setUniveristy] = useState("mora");
     const [univeristyData, setUniveristyData] = useState([]);
     const [count, setCount] = useState(0);
+
+    const context = useContext(UserContext);
+    console.log("Context:", context);
 
     useEffect(() => {
         const fetchUniversityData = async () => {
@@ -22,6 +26,17 @@ const UniverisityProfile = () => {
 
     return (
         <div className="min-h-screen bg-gray-100 p-6">
+
+            {context.counter}
+
+            <button onClick={() => context.incrementCounter()} className="bg-blue-500 text-white px-4 py-2 rounded-md mb-4">
+                Increment Counter
+            </button>
+
+            <button onClick={() => context.decrementCounter()} className="bg-red-500 text-white px-4 py-2 rounded-md mb-4 ml-2">
+                Decrement Counter
+            </button>
+
             <div className="max-w-4xl mx-auto bg-white shadow-md rounded-md p-8">
                 <h1 className="text-3xl font-bold mb-6 text-center text-blue-700">University Search</h1>
 

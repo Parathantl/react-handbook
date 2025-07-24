@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { UserContext } from './UserContext';
 
 const ContactUs = () => {
     const [form, setForm] = useState({ name: '', email: '', message: '' });
+    const context = useContext(UserContext)
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
@@ -16,6 +18,17 @@ const ContactUs = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-white to-blue-50 py-12 px-6">
+
+            {context.counter}
+
+            <button onClick={() => context.incrementCounter()} className="bg-blue-500 text-white px-4 py-2 rounded-md mb-4">
+                Increment Counter
+            </button>
+
+            <button onClick={() => context.decrementCounter()} className="bg-red-500 text-white px-4 py-2 rounded-md mb-4 ml-2">
+                Decrement Counter
+            </button>
+
             <div className="max-w-3xl mx-auto bg-white shadow-md rounded-lg p-10">
                 <h1 className="text-3xl font-bold text-blue-700 mb-6 text-center">Contact Us</h1>
                 <form onSubmit={handleSubmit} className="space-y-6">
