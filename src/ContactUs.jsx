@@ -19,7 +19,7 @@ const ContactUs = () => {
     return (
         <div className="min-h-screen bg-gradient-to-br from-white to-blue-50 py-12 px-6">
 
-            {context.counter}
+            {/* {context.counter}
 
             <button onClick={() => context.incrementCounter()} className="bg-blue-500 text-white px-4 py-2 rounded-md mb-4">
                 Increment Counter
@@ -27,7 +27,7 @@ const ContactUs = () => {
 
             <button onClick={() => context.decrementCounter()} className="bg-red-500 text-white px-4 py-2 rounded-md mb-4 ml-2">
                 Decrement Counter
-            </button>
+            </button> */}
 
             <div className="max-w-3xl mx-auto bg-white shadow-md rounded-lg p-10">
                 <h1 className="text-3xl font-bold text-blue-700 mb-6 text-center">Contact Us</h1>

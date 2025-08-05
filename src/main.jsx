@@ -7,7 +7,7 @@ import { UserProvider } from './UserProvider.jsx';
 
 createRoot(document.getElementById('root')).render(
   // <StrictMode>
-  <BrowserRouter>z
+  <BrowserRouter>
     <UserProvider>
       <App />
     </UserProvider>
