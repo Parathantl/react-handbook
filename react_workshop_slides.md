@@ -1,5 +1,4 @@
 # React Frontend Development Workshop
-**University of Jaffna - Computer Science Department**
 
 *A hands-on introduction to modern React development*
 
@@ -913,8 +912,3 @@ A: Use useEffect with fetch() or axios, handle loading states, and clean up with
 - **Next Workshop**: Advanced React Patterns & Performance
 
 **Happy Coding! 🚀**
-
----
-
-*University of Jaffna - Computer Science Department*
-*React Frontend Development Workshop*
